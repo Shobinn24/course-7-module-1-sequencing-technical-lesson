@@ -1,11 +1,15 @@
+# display the lists of tasks
 def display_tasks(task_list):
-    """Displays the list of tasks."""
-    print(f"\nDisplaying all tasks is not yet implemented")
+    for index, task in enumerate(task_list, start=1):
+        print(f"{index}. {task}")
 
 def filter_tasks(task_list, keyword):
-    """Placeholder for filtering tasks (students will implement)."""
-    print(f"\nFiltering for '{keyword}' is not yet implemented.")
+    """Filter tasks that contain the keyword (case-insensitive)."""
+    filtered = [task for task in task_list if keyword.lower() in task.lower()]
+    return filtered
 
 def task_generator(task_list, keyword):
-    """Placeholder for generator-based filtering (students will implement)."""
-    print(f"\nLazy evaluation for '{keyword}' is not yet implemented.")
+    """Generator for filtering tasks that contain the keyword (case-insensitive)."""
+    for task in task_list:
+        if keyword.lower() in task.lower():
+            yield task

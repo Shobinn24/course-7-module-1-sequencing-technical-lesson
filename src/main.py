@@ -6,3 +6,5 @@ tasks = ["Buy groceries", "Finish project", "Call mom", "Send email", "Clean roo
 print("\nAll Tasks:")
 display_tasks(tasks)
 
+filter_tasks(tasks, "project")
+
